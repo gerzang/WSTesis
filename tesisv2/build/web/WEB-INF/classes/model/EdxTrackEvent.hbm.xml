@@ -1,0 +1,201 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 19/06/2017 17:16:13 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.EdxTrackEvent" table="EdxTrackEvent" catalog="Edx" optimistic-lock="version">
+        <id name="id" type="string">
+            <column name="_id" length="40" />
+            <generator class="assigned" />
+        </id>
+        <property name="eventId" type="string">
+            <column name="event_id" length="40" not-null="true" />
+        </property>
+        <property name="agent" type="string">
+            <column name="agent" length="65535" not-null="true" />
+        </property>
+        <property name="eventSource" type="string">
+            <column name="event_source" not-null="true" />
+        </property>
+        <property name="eventType" type="string">
+            <column name="event_type" length="65535" not-null="true" />
+        </property>
+        <property name="ipCountry" type="string">
+            <column name="ip_country" not-null="true" />
+        </property>
+        <property name="page" type="string">
+            <column name="page" length="65535" not-null="true" />
+        </property>
+        <property name="session" type="string">
+            <column name="session" length="65535" not-null="true" />
+        </property>
+        <property name="time" type="timestamp">
+            <column name="time" length="19" not-null="true" />
+        </property>
+        <property name="anonScreenName" type="string">
+            <column name="anon_screen_name" length="65535" not-null="true" />
+        </property>
+        <property name="downtimeFor" type="timestamp">
+            <column name="downtime_for" length="19" not-null="true" />
+        </property>
+        <property name="studentId" type="string">
+            <column name="student_id" length="65535" not-null="true" />
+        </property>
+        <property name="instructorId" type="string">
+            <column name="instructor_id" length="65535" not-null="true" />
+        </property>
+        <property name="courseId" type="string">
+            <column name="course_id" not-null="true" />
+        </property>
+        <property name="courseDisplayName" type="string">
+            <column name="course_display_name" not-null="true" />
+        </property>
+        <property name="resourceDisplayName" type="string">
+            <column name="resource_display_name" not-null="true" />
+        </property>
+        <property name="organization" type="string">
+            <column name="organization" not-null="true" />
+        </property>
+        <property name="sequenceId" type="string">
+            <column name="sequence_id" not-null="true" />
+        </property>
+        <property name="gotoFrom" type="int">
+            <column name="goto_from" not-null="true" />
+        </property>
+        <property name="gotoDest" type="int">
+            <column name="goto_dest" not-null="true" />
+        </property>
+        <property name="problemId" type="string">
+            <column name="problem_id" not-null="true" />
+        </property>
+        <property name="problemChoice" type="string">
+            <column name="problem_choice" length="65535" not-null="true" />
+        </property>
+        <property name="questionLocation" type="string">
+            <column name="question_location" length="65535" not-null="true" />
+        </property>
+        <property name="submissionId" type="string">
+            <column name="submission_id" length="65535" not-null="true" />
+        </property>
+        <property name="attempts" type="int">
+            <column name="attempts" not-null="true" />
+        </property>
+        <property name="longAnswer" type="string">
+            <column name="long_answer" length="65535" not-null="true" />
+        </property>
+        <property name="studentFile" type="string">
+            <column name="student_file" length="65535" not-null="true" />
+        </property>
+        <property name="canUploadFile" type="string">
+            <column name="can_upload_file" not-null="true" />
+        </property>
+        <property name="feedback" type="string">
+            <column name="feedback" length="65535" not-null="true" />
+        </property>
+        <property name="feedbackResponseSelected" type="byte">
+            <column name="feedback_response_selected" not-null="true" />
+        </property>
+        <property name="transcriptId" type="string">
+            <column name="transcript_id" length="65535" not-null="true" />
+        </property>
+        <property name="transcriptCode" type="string">
+            <column name="transcript_code" not-null="true" />
+        </property>
+        <property name="rubricSelection" type="int">
+            <column name="rubric_selection" not-null="true" />
+        </property>
+        <property name="rubricCategory" type="int">
+            <column name="rubric_category" not-null="true" />
+        </property>
+        <property name="videoId" type="string">
+            <column name="video_id" not-null="true" />
+        </property>
+        <property name="videoCode" type="string">
+            <column name="video_code" length="65535" not-null="true" />
+        </property>
+        <property name="videoCurrentTime" type="string">
+            <column name="video_current_time" not-null="true" />
+        </property>
+        <property name="videoSpeed" type="string">
+            <column name="video_speed" not-null="true" />
+        </property>
+        <property name="videoOldTime" type="string">
+            <column name="video_old_time" not-null="true" />
+        </property>
+        <property name="videoNewTime" type="string">
+            <column name="video_new_time" not-null="true" />
+        </property>
+        <property name="videoSeekType" type="string">
+            <column name="video_seek_type" not-null="true" />
+        </property>
+        <property name="videoNewSpeed" type="string">
+            <column name="video_new_speed" not-null="true" />
+        </property>
+        <property name="videoOldSpeed" type="string">
+            <column name="video_old_speed" not-null="true" />
+        </property>
+        <property name="bookInteractionType" type="string">
+            <column name="book_interaction_type" not-null="true" />
+        </property>
+        <property name="success" type="string">
+            <column name="success" not-null="true" />
+        </property>
+        <property name="answerId" type="string">
+            <column name="answer_id" length="65535" not-null="true" />
+        </property>
+        <property name="hint" type="string">
+            <column name="hint" length="65535" not-null="true" />
+        </property>
+        <property name="mode" type="string">
+            <column name="mode" not-null="true" />
+        </property>
+        <property name="msg" type="string">
+            <column name="msg" length="65535" not-null="true" />
+        </property>
+        <property name="npoints" type="byte">
+            <column name="npoints" not-null="true" />
+        </property>
+        <property name="queuestate" type="string">
+            <column name="queuestate" length="65535" not-null="true" />
+        </property>
+        <property name="origScore" type="int">
+            <column name="orig_score" not-null="true" />
+        </property>
+        <property name="newScore" type="int">
+            <column name="new_score" not-null="true" />
+        </property>
+        <property name="origTotal" type="int">
+            <column name="orig_total" not-null="true" />
+        </property>
+        <property name="newTotal" type="int">
+            <column name="new_total" not-null="true" />
+        </property>
+        <property name="eventName" type="string">
+            <column name="event_name" not-null="true" />
+        </property>
+        <property name="groupUser" type="string">
+            <column name="group_user" not-null="true" />
+        </property>
+        <property name="groupAction" type="string">
+            <column name="group_action" not-null="true" />
+        </property>
+        <property name="position" type="int">
+            <column name="position" not-null="true" />
+        </property>
+        <property name="badlyFormatted" type="string">
+            <column name="badly_formatted" length="65535" not-null="true" />
+        </property>
+        <property name="correctMapFk" type="string">
+            <column name="correctMap_fk" length="40" not-null="true" />
+        </property>
+        <property name="answerFk" type="string">
+            <column name="answer_fk" length="40" not-null="true" />
+        </property>
+        <property name="stateFk" type="string">
+            <column name="state_fk" length="40" not-null="true" />
+        </property>
+        <property name="loadInfoFk" type="string">
+            <column name="load_info_fk" length="40" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

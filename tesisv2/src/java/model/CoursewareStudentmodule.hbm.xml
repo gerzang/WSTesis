@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 19/06/2017 17:16:13 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.CoursewareStudentmodule" table="courseware_studentmodule" catalog="Edx" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <property name="moduleType" type="string">
+            <column name="module_type" length="32" not-null="true" />
+        </property>
+        <property name="moduleId" type="string">
+            <column name="module_id" not-null="true" />
+        </property>
+        <property name="studentId" type="int">
+            <column name="student_id" not-null="true" />
+        </property>
+        <property name="state" type="string">
+            <column name="state" />
+        </property>
+        <property name="grade" type="java.lang.Double">
+            <column name="grade" precision="22" scale="0" />
+        </property>
+        <property name="created" type="timestamp">
+            <column name="created" length="19" not-null="true" />
+        </property>
+        <property name="modified" type="timestamp">
+            <column name="modified" length="19" not-null="true" />
+        </property>
+        <property name="maxGrade" type="java.lang.Double">
+            <column name="max_grade" precision="22" scale="0" />
+        </property>
+        <property name="done" type="string">
+            <column name="done" length="8" not-null="true" />
+        </property>
+        <property name="courseId" type="string">
+            <column name="course_id" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

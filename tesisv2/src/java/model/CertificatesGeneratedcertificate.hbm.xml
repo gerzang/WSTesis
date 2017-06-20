@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 19/06/2017 17:16:13 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.CertificatesGeneratedcertificate" table="certificates_generatedcertificate" catalog="Edx" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <property name="userId" type="int">
+            <column name="user_id" not-null="true" />
+        </property>
+        <property name="downloadUrl" type="string">
+            <column name="download_url" length="128" not-null="true" />
+        </property>
+        <property name="grade" type="string">
+            <column name="grade" length="5" not-null="true" />
+        </property>
+        <property name="courseId" type="string">
+            <column name="course_id" not-null="true" />
+        </property>
+        <property name="key" type="string">
+            <column name="key" length="32" not-null="true" />
+        </property>
+        <property name="distinction" type="boolean">
+            <column name="distinction" not-null="true" />
+        </property>
+        <property name="status" type="string">
+            <column name="status" length="32" not-null="true" />
+        </property>
+        <property name="verifyUuid" type="string">
+            <column name="verify_uuid" length="32" not-null="true" />
+        </property>
+        <property name="downloadUuid" type="string">
+            <column name="download_uuid" length="32" not-null="true" />
+        </property>
+        <property name="name" type="string">
+            <column name="name" not-null="true" />
+        </property>
+        <property name="createdDate" type="timestamp">
+            <column name="created_date" length="19" not-null="true" />
+        </property>
+        <property name="modifiedDate" type="timestamp">
+            <column name="modified_date" length="19" not-null="true" />
+        </property>
+        <property name="errorReason" type="string">
+            <column name="error_reason" length="512" not-null="true" />
+        </property>
+        <property name="mode" type="string">
+            <column name="mode" length="32" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
